@@ -4,14 +4,15 @@ import './Service.css';
 
 const Service = ({ service }) => {
     // const {service} = props;
-    const { name, price, description, img, id } = service;
+    console.log(service);
+    const { title, price, description, img, _id } = service;
     return (
         <div className="service">
             <img src={img} alt="" />
-            <h3>{name}</h3>
+            <h3>{title}</h3>
             <h5>Price: {price}</h5>
             <p className="px-3">{description}</p>
-            <Link to={`/service/${id}`}><button className='btn btn-warning mb-3'>Book {name}</button></Link>
+            <Link to={`/service/${_id}`}><button className='btn btn-warning mb-3'>Book {title}</button></Link>
 
         </div>
     );
